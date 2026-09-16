@@ -6,28 +6,15 @@
   <title>GG EZ</title>
   <style>
     :root { color-scheme: dark; }
-    * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; background: #050505; color: #f2f2f2; }
-    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; }
-    header { position: sticky; top: 0; z-index: 1; padding: 18px 24px; background: rgba(5,5,5,.96); border-bottom: 1px solid #202020; }
-    h1 { margin: 0; font-size: 20px; letter-spacing: .12em; }
-    #status { margin-top: 5px; color: #8e8e8e; font-size: 12px; }
-    #content { padding: 22px 24px 48px; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; font: 16px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #d5d5d5; }
+    #content { padding: 22px 24px 48px; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; font: 16px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>GG EZ</h1>
-    <div id="status">Loading text…</div>
-  </header>
   <main id="content" aria-label="GG EZ text"></main>
   <script>
     // “GG EZ ” is six characters (the final space is intentional).
-    const phrase = 'GG EZ ';
-    const repetitions = 5_000_000;
-    const text = phrase.repeat(repetitions);
-    document.getElementById('content').textContent = text;
-    document.getElementById('status').textContent = `${text.length.toLocaleString()} characters · ${repetitions.toLocaleString()} repetitions`;
+    document.getElementById('content').textContent = 'GG EZ '.repeat(5_000_000);
   </script>
 </body>
 </html>
